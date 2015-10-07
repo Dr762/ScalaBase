@@ -1,4 +1,4 @@
-/*
+  /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -47,7 +47,7 @@ object Main {
     //    }
 
     var lst = List(1, 2, 3, 4, 5)
-    var lst1 = List(6, 7, 8, 9, 10)
+    var lst1 = List(6, 7, 8, 9, 10)//imutable(can't change elems by assignment)
     var bigLst = lst ::: lst1 // ::: add to back
     var bigLst1 = 0 :: bigLst // :: ad to front
     println(bigLst1)
@@ -125,6 +125,45 @@ object Main {
 
     println(Rectangle.square(3, 10))
 
+   //case class usage
+   val v = Var("x")
+   val op = BinOp("+",Number(1),v)
+   println(op.right == v)
+   println(simplifyTop(op))
+   
+   //option type getiing
+   val caps = Map("Burkina Faso"->"Uagaduguku","North Korea" ->"Pyoungyang")
+   println(caps get "Burkina Faso") 
+   println(show_option(caps get "North Korea")) 
+   
+   val f = new ExprFormatter
+   val e1 = BinOp("*",BinOp("/",Number(1),Number(2)),BinOp("+",Var("x"),Number(1)))
+   val e2 = BinOp("+",BinOp("/",Var("x"),Number(2)),BinOp("*",Number(1.5),Var("x"))) 
+   val e3 = BinOp("/",e1,e2)
+   
+   def show(e:Expr)=println(f.format(e)+"\n\n")
+   for(e<-Array(e1,e2,e3)) show(e)
+   
+    //some more list ops
+    
+    println("Empty list: " +Nil)
+    println("Empty list + non-empty: "+bigLst1::Nil)
+    println("head of list: "+bigLst1.head)
+    println("end of list: "+bigLst1.last)
+    println("list init: "+bigLst1.init)
+    println("reverse: "+bigLst1.reverse)
+    
+    var bigLst2 = List(11,12,13,14,15)
+    var bigLst3 = List(bigLst1,bigLst2).flatten
+    println(bigLst3)
+    
+    var bigLst4 = List('a','b','c','d','e')
+    println("Zipped lists")
+    println(bigLst2 zip bigLst4)
+    println("String view of list: "+bigLst3.mkString(" "))
+    println("+100 to all: " +(bigLst3 map (_+100)).mkString(" "))
+    println("Mod 2 list" )
+    println(bigLst3 filter(_ % 2 ==0))
    
     
   }
@@ -138,4 +177,26 @@ object Main {
 
   def containsOdd(nums: List[Int]) = nums.exists(_ % 2 == 1)
 
+  //pattern matching
+  def simplifyTop(expr:Expr):Expr = expr match{
+    
+  case UnOp("-",UnOp("-",e)) => e  // Double -
+  case BinOp("+",e,Number(0)) => e  // Add zero
+  case BinOp("*",e,Number(1)) => e // Multi 1  
+  case _=>expr  
+  }
+  
+  //sealed class
+  def describe(e:Expr):String = (e: @unchecked) match{
+    
+    case Number(_)=> "a number"
+    case Var(_) => "a variable"  
+  }
+  
+  //get option type
+  def show_option(x:Option[String]) = x match {
+    case Some(s) =>s
+    case None => "?"  
+    
+  }
 }

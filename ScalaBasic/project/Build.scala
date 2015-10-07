@@ -8,16 +8,17 @@ import com.typesafe.sbt.SbtScalariform.ScalariformKeys
  */
 object Build extends sbt.Build {
 
-  lazy val root = Project("SampleProject", file("."))
+  lazy val root = Project("ScalaBasicProject", file("."))
     .settings(basicSettings: _*)
     .settings(libraryDependencies ++= Dependencies.basic)
 
   lazy val basicSettings = Seq(
-    organization := "your.organization",
+    organization := "org.abondar",
     version := "0.1.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-unchecked", "-deprecation"),
     javacOptions ++= Seq("-source", "1.6", "-target", "1.6"),
+    
     resolvers ++= Seq(
       "Sonatype OSS Releases" at "https://oss.sonatype.org/content/repositories/releases",
       "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",

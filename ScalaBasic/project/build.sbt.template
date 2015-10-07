@@ -21,6 +21,11 @@ lazy val commonSettings = Seq(
   )
 )
 
+    libraryDependencies ++= Seq(
+       "junit" % "junit" % "4.8.1" % "test"
+    )
+
+libraryDependencies += Seq("org.scalatest" % "scalatest_2.10" % "2.0" % "test")
 
 // scalariform code format settings
 scalariformSettings // enable scalariformSettings
