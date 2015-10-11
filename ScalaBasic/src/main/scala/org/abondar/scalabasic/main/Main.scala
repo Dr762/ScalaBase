@@ -6,7 +6,9 @@
 
 package org.abondar.scalabasic.main
 
+import org.abondar.scalabasic.main.siumulation.ConcerteSim
 import scala.collection.mutable.Map
+import scala.collection.mutable._
 import scala.io.Source
 
 object Main {
@@ -165,7 +167,17 @@ object Main {
     println("Mod 2 list" )
     println(bigLst3 filter(_ % 2 ==0))
    
+    println(countWords("WIR SIND BAUMANS!! WIR SIND ENGINNEEREN"))
+   
+    var sb = new ScalaBean()
+    sb.xInt_=(6)
+    sb.xString_=("Cool")
     
+    println("ScalaBean values: "+sb.xInt  + " " + sb.xString )
+    
+    //simulator usage
+    ConcerteSim.input1 setSignal true
+    ConcerteSim.run()
   }
 
   def func1(x: Int, y: Int): Int = {
@@ -184,6 +196,7 @@ object Main {
   case BinOp("+",e,Number(0)) => e  // Add zero
   case BinOp("*",e,Number(1)) => e // Multi 1  
   case _=>expr  
+    
   }
   
   //sealed class
@@ -199,4 +212,18 @@ object Main {
     case None => "?"  
     
   }
+  
+  //using mutable map for counting words
+  def countWords(text:String) = {
+    val counts = Map.empty[String,Int]
+    for (rawWord <-text.split("[ ,!.]+")){
+     val word = rawWord.toLowerCase
+     val oldCount = if (counts.contains(word)) counts(word) else 0
+     counts += (word->(oldCount+1))
+      
+    }
+    counts
+  }
+  
+  
 }
