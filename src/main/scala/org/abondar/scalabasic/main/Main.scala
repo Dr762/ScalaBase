@@ -7,6 +7,7 @@
 package org.abondar.scalabasic.main
 
 import org.abondar.scalabasic.main.siumulation.ConcerteSim
+import org.abondar.scalabasic.main.typeparam.QueueAlter
 import scala.collection.mutable.Map
 import scala.collection.mutable._
 import scala.io.Source
@@ -178,6 +179,28 @@ object Main {
     //simulator usage
     ConcerteSim.input1 setSignal true
     ConcerteSim.run()
+    
+    //queue usage
+    val q1 = Queue.apply(1,2,3)
+    println(q1)
+    
+    // how we can use tratited queue 
+    def qa(q:QueueAlter[String]){
+      
+    }
+    
+    //enum iteration
+    for (c<-Color.values) print(c)
+    
+   
+  }
+  
+  //enum
+  object Color extends Enumeration{
+    val Red = Value("Red")
+    val Green = Value("Green")
+    val Blue = Value("Blue")
+    
   }
 
   def func1(x: Int, y: Int): Int = {
