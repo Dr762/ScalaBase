@@ -197,15 +197,7 @@ object Main {
     println(Email.unapply("abondar1992@gmail.com"))
     println(Email.apply("desertslrc","icloud.com"))
 
-    val therm = new CCTherm {
-      val condition: Int = 7
-      val bookPrice: Int = 2199
-      val purchasePrice: Int = 700
-      val yearMade: Int = 1952
-      val descr: String = "HHHH"
-      val dateObtained: String = "September 24,2012"
-    }
-    //println(therm.toXML)
+
 
   }
 
