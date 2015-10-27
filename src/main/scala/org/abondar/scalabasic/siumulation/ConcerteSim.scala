@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.abondar.scalabasic.main.siumulation
+package org.abondar.scalabasic.siumulation
 
 object ConcerteSim extends CircuitSimulation{
  def InverterDelay = 1

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.abondar.scalabasic.main.typeparam
+package org.abondar.scalabasic.typeparam
 
 class Queue[T](
   private[this] var leading: List[T],

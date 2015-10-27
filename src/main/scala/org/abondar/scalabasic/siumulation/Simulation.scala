@@ -5,7 +5,7 @@
  */
 
 //in this package we demonstrate the power of stateful objects
-package org.abondar.scalabasic.main.siumulation
+package org.abondar.scalabasic.siumulation
 
 abstract class Simulation {
 

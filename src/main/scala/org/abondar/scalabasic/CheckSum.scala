@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 
-package org.abondar.scalabasic.main
+package org.abondar.scalabasic
+
 import scala.collection.mutable.Map
 //they are companions
 class CheckSum {

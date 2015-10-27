@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.abondar.scalabasic.main.typeparam
-
+package org.abondar.scalabasic.typeparam
 
 // another variant of queue definition
 // here queue class is private and we use trait taking a type param.

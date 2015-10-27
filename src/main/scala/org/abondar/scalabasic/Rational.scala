@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.abondar.scalabasic.main
+package org.abondar.scalabasic
 
 class Rational(n: Int, d: Int) {
   require(d!=0)

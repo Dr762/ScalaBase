@@ -1,4 +1,4 @@
-package org.abondar.scalabasic.main
+package org.abondar.scalabasic
 
 /**
  * Created by alex on 21.10.15.

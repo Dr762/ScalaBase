@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 
-package org.abondar.scalabasic.main
+package org.abondar.scalabasic
+
 import Element.elem;
 //case class
 sealed abstract class Expr 

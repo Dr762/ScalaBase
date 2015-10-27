@@ -4,13 +4,13 @@
 * and open the template in the editor.
 */
 
-package org.abondar.scalabasic.main
+package org.abondar.scalabasic
 
-import org.abondar.scalabasic.main.siumulation.ConcerteSim
-import org.abondar.scalabasic.main.typeparam.QueueAlter
-import scala.collection.mutable.Map
-import scala.collection.mutable._
-import scala.io.Source
+import org.abondar.scalabasic.siumulation.ConcerteSim
+import org.abondar.scalabasic.typeparam.QueueAlter
+
+
+import scala.collection.mutable.{Map, _}
 
 object Main {
 
@@ -197,8 +197,15 @@ object Main {
     println(Email.unapply("abondar1992@gmail.com"))
     println(Email.apply("desertslrc","icloud.com"))
 
+    SimpleActor.start()
 
+    val actor2 = actor {
+      recieve {
+        case x:Int=> println("Here is "+ x)
+      }
+      Thread.sleep(1000)
 
+    }
   }
 
   //enum

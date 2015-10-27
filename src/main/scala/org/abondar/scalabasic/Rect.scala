@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.abondar.scalabasic.main
+package org.abondar.scalabasic
 
 //trait example
 class Point(val x :Int, val y:Int)
