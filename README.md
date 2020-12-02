@@ -10,6 +10,7 @@ Basics of scala language.
 6. List (lst) - creation of lists.
 7. Tuple (tup) - tuple usage.
 8. Map (map) - map usage.
+9. File (file) - read file contents.
 
 ## Build and run
 

@@ -10,6 +10,7 @@ import org.abondar.scalabasic.siumulation.ConcerteSim
 import org.abondar.scalabasic.typeparam.QueueAlter
 
 import scala.collection.mutable
+import scala.io.Source
 
 object Main {
 
@@ -89,12 +90,14 @@ object Main {
         println(mMap(1))
       }
 
+      if (arg.equals("file")){
+        for (line <- Source.fromFile("README.md").getLines())
+          println(line)
+      }
+
     }
 
-//    //read lines from file
-//
-//    //    for (line <- Source.fromFile("/home/alex/license.txt").getLines())
-//    //      println(line)
+
 //
 //    val cs = new CheckSum
 //    cs.add(7)
