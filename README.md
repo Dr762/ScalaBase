@@ -13,6 +13,8 @@ Basics of scala language.
 9. File (file) - read file contents.
 10. Class (cl) - class with object usage.
 11. Symbol literal (sl) - usage of symbol literal.
+12. Functional literal (ful) - functional literal.
+
 
 ## Build and run
 

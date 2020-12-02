@@ -121,6 +121,8 @@ object Main {
         println("2 - Rational 2: " + (2 - rat1))
         println("2 * Rational 2: " + 2 * rat1)
         println("2 / Rational 2: " + 2 / rat1)
+
+        println(Rectangle.square(3, 10))
       }
 
       if (arg.equals("sl")){
@@ -128,33 +130,36 @@ object Main {
         println(s)
       }
 
+      if (arg.equals("ful")){
+        val inc = (x: Int) => x + 1 //function literal (1st class func) . CLOSURE HERE!
+
+        def moreInc(more: Int) = (x: Int) => x + more //closure
+        val fff = moreInc(32)
+        println(fff)
+
+        println(inc(10))
+
+        val lst = List(1,2,3,4,5,6, 7, 8, 9, 10)
+        println(lst.filter((x) => x > 5)) //short-formed literal
+        println(lst.filter(x => x > 2)) //short-formed literal
+        println(lst.filter(_ > 7)) // short-formed literal
+        println("Contains odds: " + containsOdd(lst))
+
+        def sum(a: Int, b: Int, c: Int) = a + b + c
+        val su = sum _
+        println(su(1, 5, 6))
+        val su1 = sum(1, _: Int, 8)
+        println(su1(7))
+
+        def currSum(x: Int)(y: Int) = x + y
+        val cres = currSum(1)(5)
+        println("Curr sum res: " + cres)
+      }
+
     }
 
 //
-//    var inc = (x: Int) => x + 1 //function literal (1st class func) . CLOSURE HERE!
 //
-//    def moreInc(more: Int) = (x: Int) => x + more //closure
-//    val fff = moreInc(32)
-//    println(fff)
-//
-//    println(inc(10))
-//
-//    println(bigLst1.filter((x) => x > 5)) //short-formed literal
-//    println(bigLst1.filter(x => x > 2)) //short-formed literal
-//    println(bigLst1.filter(_ > 7)) // short-formed literal
-//    println("Contains odds: " + containsOdd(bigLst1))
-//
-//    def sum(a: Int, b: Int, c: Int) = a + b + c
-//    val su = sum _
-//    println(su(1, 5, 6))
-//    val su1 = sum(1, _: Int, 8)
-//    println(su1(7))
-//
-//    def currSum(x: Int)(y: Int) = x + y
-//    val cres = currSum(1)(5)
-//    println("Curr sum res: " + cres)
-//
-//    println(Rectangle.square(3, 10))
 //
 //    //case class usage
 //    val v = Var("x")
