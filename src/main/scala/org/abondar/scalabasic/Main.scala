@@ -25,20 +25,22 @@ object Main {
     println(res)
 
     if (args.length>0){
-      if (args(0).equals("fn")) {
+
+      val arg = args(0)
+      if (arg.equals("fn")) {
         res = func1(2, 3)
         println("Calculation result")
         println(res)
       }
 
-      if (args(0).equals("fl")){
+      if (arg.equals("fl")){
             println(" ")
             println("Number range")
             for (ar <- 0 to 10)
               println(ar)
       }
 
-      if (args(0).equals("arr")){
+      if (arg.equals("arr")){
         val demoArr: Array[String] = new Array[String](3)
         demoArr(0) = "Medved"
         demoArr(1) = "Vodka"
@@ -50,29 +52,26 @@ object Main {
 
       }
 
+      if (arg.equals("wl")){
+        val arr = Array("Berlin", "Moscow", "Tokio")
+        var i = 0
+        while(i<arr.length){
+        println(arr(i))
+        i+=1
+        }
+      }
 
-      if (args(0).equals("wl")){
-            val arr = Array("Berlin", "Moscow", "Tokio")
-            var i = 0
-            while(i<arr.length){
-            println(arr(i))
-            i+=1
-
-            }
+      if (arg.equals("lst")){
+        val lst = List(1, 2, 3, 4, 5)
+        val lst1 = List(6, 7, 8, 9, 10) //imutable(can't change elems by assignment)
+        val bigLst = lst ::: lst1 // ::: add to back
+        val bigLst1 = 0 :: bigLst // :: ad to front
+        println(bigLst1)
       }
 
 
     }
 
-
-
-
-
-//    var lst = List(1, 2, 3, 4, 5)
-//    var lst1 = List(6, 7, 8, 9, 10) //imutable(can't change elems by assignment)
-//    var bigLst = lst ::: lst1 // ::: add to back
-//    var bigLst1 = 0 :: bigLst // :: ad to front
-//    println(bigLst1)
 //
 //    var tup = (100, "cool", 3.4) //tuple
 //    println(tup._3)
@@ -226,9 +225,6 @@ object Main {
 //
 //    }
   }
-
-
-
 
   //enum
   object Color extends Enumeration {

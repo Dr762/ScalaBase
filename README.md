@@ -7,6 +7,7 @@ Basics of scala language.
 3. For Loop (fl) - Basic for loop.
 4. Array (arr) - Array creation and usage.
 5. While loop (wl) - While loop.
+6. List (lst) - creation of lists.
 
 ## Build and run
 
