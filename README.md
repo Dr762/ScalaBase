@@ -11,6 +11,7 @@ Basics of scala language.
 7. Tuple (tup) - tuple usage.
 8. Map (map) - map usage.
 9. File (file) - read file contents.
+10. Class (cl) - class with object usage.
 
 ## Build and run
 

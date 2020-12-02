@@ -14,8 +14,6 @@ class CheckSum {
 
   def add(b: Byte){sum += b} 
   def checkSum():Int =  ~(sum & 0xFF) +1
-    
-  
 
 }
 

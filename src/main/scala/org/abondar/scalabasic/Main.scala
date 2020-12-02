@@ -95,17 +95,18 @@ object Main {
           println(line)
       }
 
+      if (arg.equals("cl")){
+        val cs = new CheckSum
+        cs.add(7)
+        println(cs.checkSum())
+
+        //here we call a singleton
+        val res1 = CheckSum.calc("Ferrari")
+        println(res1)
+      }
+
     }
 
-
-//
-//    val cs = new CheckSum
-//    cs.add(7)
-//    println(cs.checkSum)
-//
-//    //here we call a singleton
-//    val res1 = CheckSum.calc("Ferrari")
-//    println(res1)
 //
 //    val s = 'symbol //symnol literal
 //    println(s)
