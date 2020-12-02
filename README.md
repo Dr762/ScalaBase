@@ -8,6 +8,8 @@ Basics of scala language.
 4. Array (arr) - Array creation and usage.
 5. While loop (wl) - While loop.
 6. List (lst) - creation of lists.
+7. Tuple (tup) - tuple usage.
+8. Map (map) - map usage.
 
 ## Build and run
 

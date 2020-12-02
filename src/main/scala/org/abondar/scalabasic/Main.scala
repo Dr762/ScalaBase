@@ -69,24 +69,28 @@ object Main {
         println(bigLst1)
       }
 
+      if (arg.equals("tup")){
+        val tup = (100, "cool", 3.4) //tuple
+        println(tup._3)
+      }
+
+      if (arg.equals("set")){
+        var st = mutable.Set("aa", "bb") //immutable set
+        st += "cc" //here it's actually st = st+"cc"
+        println(st)
+        println(st.contains("dd"))
+      }
+
+      if (arg.equals("map")){
+        val mMap = mutable.Map[Int, String]() //mut map
+        mMap += (1 -> "Cool")
+        mMap += (2 -> "Great")
+        mMap += (3 -> "Awesome")
+        println(mMap(1))
+      }
 
     }
 
-//
-//    var tup = (100, "cool", 3.4) //tuple
-//    println(tup._3)
-//
-//    var st = mutable.Set("aa", "bb") //immutable set
-//    st += "cc" //here it's actually st = st+"cc"
-//    println(st)
-//    println(st.contains("dd"))
-//
-//    val mMap = mutable.Map[Int, String]() //mut map
-//    mMap += (1 -> "Cool")
-//    mMap += (2 -> "Great")
-//    mMap += (3 -> "Awesome")
-//    println(mMap(1))
-//
 //    //read lines from file
 //
 //    //    for (line <- Source.fromFile("/home/alex/license.txt").getLines())
