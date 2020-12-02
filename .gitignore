@@ -5,8 +5,10 @@
 .cache
 .history
 .lib/
-./idea
+.idea
+.bsp
 ./out
+project
 dist/*
 target/
 lib_managed/

@@ -8,10 +8,11 @@ import akka.actor._
 object SimpleActor extends Actor{
 
   def act(){
-      for (i<- 1 to 10){
+      for (_ <- 1 to 10){
         println("We are delta")
         Thread.sleep(1000)
       }
   }
 
+  override def receive: Receive = ???
 }
