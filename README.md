@@ -7,13 +7,16 @@ Basics of scala language.
 3. For Loop (fl) - Basic for loop.
 4. Array (arr) - Array creation and usage.
 5. While loop (wl) - While loop.
-6. List (lst) - creation of lists.
-7. Tuple (tup) - tuple usage.
-8. Map (map) - map usage.
-9. File (file) - read file contents.
-10. Class (cl) - class with object usage.
-11. Symbol literal (sl) - usage of symbol literal.
-12. Functional literal (ful) - functional literal.
+6. List (lst) - Creation of lists and usage of list operations.
+7. Tuple (tup) - Tuple usage.
+8. Map (map) - Map usage.
+9. File (file) - Read file contents.
+10. Class (cl) - Class with object usage.
+11. Symbol literal (sl) - Usage of symbol literal.
+12. Functional literal (ful) - Functional literal.
+13. Case class (ccl) - Case class usage.
+14. Option type (ot) - Option type getting.
+15. Count Words (cw) - Usage mutable map for counting words.
 
 
 ## Build and run
