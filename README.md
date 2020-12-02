@@ -17,6 +17,11 @@ Basics of scala language.
 13. Case class (ccl) - Case class usage.
 14. Option type (ot) - Option type getting.
 15. Count Words (cw) - Usage mutable map for counting words.
+16. Simulation (sim) - Stateful object usage.
+17. Queue (qq) - Queue and Traited queue usage.
+18. Enum Iteration (ei) - Create and Iterate over enum.
+19. Email (email) - Extractor usage.
+
 
 
 ## Build and run

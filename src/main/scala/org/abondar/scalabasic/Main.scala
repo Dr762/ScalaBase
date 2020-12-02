@@ -7,12 +7,13 @@
 package org.abondar.scalabasic
 
 import org.abondar.scalabasic.siumulation.ConcerteSim
-import org.abondar.scalabasic.typeparam.QueueAlter
+import org.abondar.scalabasic.typeparam.{Queue, QueueAlter}
 
 import scala.collection.mutable
 import scala.io.Source
 
 object Main {
+
 
   /**
    * @param args the command line arguments
@@ -204,39 +205,31 @@ object Main {
         println(countWords("WIR SIND BAUMANS!! WIR SIND ENGINNEEREN"))
       }
 
+      if (arg.equals("sim")){
+        ConcerteSim.input1 setSignal true
+        ConcerteSim.run()
+      }
+
+      if (arg.equals("qq")){
+        val q1 = Queue.apply(1, 2, 3)
+        println(q1)
+
+        def qa(q: QueueAlter[String]) {
+
+        }
+      }
+
+      if (arg.equals("ei")){
+        for (c <- Color.values) println(c)
+      }
+
+      if (arg.equals("email")){
+        println(Email.unapply("abondar1992@gmail.com"))
+        println(Email.apply("desertslrc","icloud.com"))
+      }
+
+
     }
-
-
-//    //simulator usage
-//    ConcerteSim.input1 setSignal true
-//    ConcerteSim.run()
-//
-//    //queue usage
-//    val q1 = Queue.apply(1, 2, 3)
-//    println(q1)
-//
-//
-//    // how we can use tratited queue
-//    def qa(q: QueueAlter[String]) {
-//
-//    }
-//
-//    //enum iteration
-//    for (c <- Color.values) println(c)
-//
-//    //extractor Usage
-//    println(Email.unapply("abondar1992@gmail.com"))
-//    println(Email.apply("desertslrc","icloud.com"))
-
-//    SimpleActor.start()
-//
-//    val actor2 = actor {
-//      recieve {
-//        case x:Int=> println("Here is "+ x)
-//      }
-//      Thread.sleep(1000)
-//
-//    }
   }
 
   //enum
@@ -290,6 +283,4 @@ object Main {
     }
     counts
   }
-
-
 }
