@@ -9,6 +9,8 @@
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
     </profile>
-    <profile name="sbt 1" modules="scalabase" />
+    <profile name="sbt 1" modules="scalabase">
+      <option name="implicitConversions" value="true" />
+    </profile>
   </component>
 </project>

@@ -93,6 +93,8 @@ object Main {
       if (arg.equals("file")){
         for (line <- Source.fromFile("README.md").getLines())
           println(line)
+
+        LongFile.processFile("pom.xml", 50);
       }
 
       if (arg.equals("cl")){
@@ -103,6 +105,22 @@ object Main {
         //here we call a singleton
         val res1 = CheckSum.calc("Ferrari")
         println(res1)
+
+        val rat = new Rational(3, 4)
+        val rat1 = new Rational(5, 6)
+        println("Rational 1: " + rat.toString)
+        println("Rational 2: " + rat1.toString)
+
+        println("Rational 1 + Rational 2: " + (rat + rat1))
+        println("Rational 1 - Rational 2: " + (rat - rat1))
+        println("Rational 1 * Rational 2: " + rat * rat1)
+        println("Rational 1 / Rational 2: " + rat / rat1)
+
+        implicit def intToRational(x: Int): Rational = new Rational(2) //to solve conflict with ints
+        println("2 + Rational 2: " + 2 + rat1)
+        println("2 - Rational 2: " + (2 - rat1))
+        println("2 * Rational 2: " + 2 * rat1)
+        println("2 / Rational 2: " + 2 / rat1)
       }
 
       if (arg.equals("sl")){
@@ -112,23 +130,6 @@ object Main {
 
     }
 
-//    val rat = new Rational(3, 4)
-//    val rat1 = new Rational(5, 6)
-//    println("Rational 1: " + rat.toString)
-//    println("Rational 2: " + rat1.toString)
-//
-//    println("Rational 1 + Rational 2: " + (rat + rat1))
-//    println("Rational 1 - Rational 2: " + (rat - rat1))
-//    println("Rational 1 * Rational 2: " + rat * rat1)
-//    println("Rational 1 / Rational 2: " + rat / rat1)
-//
-//    implicit def intToRational(x: Int): Rational = new Rational(2) //to solve conflict with ints
-//    println("2 + Rational 2: " + 2 + rat1)
-//    println("2 - Rational 2: " + (2 - rat1))
-//    println("2 * Rational 2: " + 2 * rat1)
-//    println("2 / Rational 2: " + 2 / rat1)
-//
-//    LongFile.processFile("/home/alex/bootstrap-3.3.5-dist/js/bootstrap.js", 50);
 //
 //    var inc = (x: Int) => x + 1 //function literal (1st class func) . CLOSURE HERE!
 //
