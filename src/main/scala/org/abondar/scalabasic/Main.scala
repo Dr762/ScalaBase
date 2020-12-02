@@ -31,31 +31,42 @@ object Main {
         println(res)
       }
 
+      if (args(0).equals("fl")){
+            println(" ")
+            println("Number range")
+            for (ar <- 0 to 10)
+              println(ar)
+      }
+
+      if (args(0).equals("arr")){
+        val demoArr: Array[String] = new Array[String](3)
+        demoArr(0) = "Medved"
+        demoArr(1) = "Vodka"
+        demoArr(2) = "Balalaika"
+        demoArr.foreach(ar => println(ar))
+
+        val arr = Array("Matryoshka", "Babushka", "Sibir")
+        arr.foreach(ar => println(ar)) // for-each for the real man
+
+      }
+
+
+      if (args(0).equals("wl")){
+            val arr = Array("Berlin", "Moscow", "Tokio")
+            var i = 0
+            while(i<arr.length){
+            println(arr(i))
+            i+=1
+
+            }
+      }
+
+
     }
 
 
 
 
-    //var arr: Array[String] = new Array[String](3)
-    //arr(0) = "Medved"
-    //arr(1) = "Vodka"
-    //arr(2) = "Balalaika"
-//    var arr = Array("Medved", "Vodka", "Balalaika")
-//    arr.foreach(ar => println(ar)) // for-each for the real man
-
-    // typical for-each through range.    
-//    println(" ")
-//    println("Number range")
-//    for (ar <- 0 to 10)
-//      println(ar)
-
-    // typical while    
-    //    var i = 0
-    //    while(i<arr.length){
-    //    println(arr(i))
-    //    i+=1
-    //      
-    //    }
 
 //    var lst = List(1, 2, 3, 4, 5)
 //    var lst1 = List(6, 7, 8, 9, 10) //imutable(can't change elems by assignment)
