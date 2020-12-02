@@ -105,12 +105,13 @@ object Main {
         println(res1)
       }
 
+      if (arg.equals("sl")){
+        val s = 'symbol
+        println(s)
+      }
+
     }
 
-//
-//    val s = 'symbol //symnol literal
-//    println(s)
-//
 //    val rat = new Rational(3, 4)
 //    val rat1 = new Rational(5, 6)
 //    println("Rational 1: " + rat.toString)

@@ -12,6 +12,7 @@ Basics of scala language.
 8. Map (map) - map usage.
 9. File (file) - read file contents.
 10. Class (cl) - class with object usage.
+11. Symbol literal (sl) - usage of symbol literal.
 
 ## Build and run
 
